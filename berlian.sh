@@ -82,8 +82,7 @@ apt install ruby -y
 gem install lolcat
 apt install wondershaper -y
 clear
-# REPO    
-    REPO="https://raw.githubusercontent.com/titis69/sccoba/main/"
+# REPO    REPO="https://raw.githubusercontent.com/titis69/sccoba/main/"
 
 ####
 start=$(date +%s)
@@ -319,7 +318,7 @@ print_install "Memasang SSL Pada Domain"
 }
 
 function make_folder_xray() {
-rm -rf /etc/vmess/.vmess.db
+    rm -rf /etc/vmess/.vmess.db
     rm -rf /etc/vless/.vless.db
     rm -rf /etc/trojan/.trojan.db
     rm -rf /etc/shadowsocks/.shadowsocks.db
@@ -771,10 +770,10 @@ function menu(){
     rm -rf menu
     rm -rf menu.zip
     wget -q -O /usr/local/sbin/backupi "https://raw.githubusercontent.com/titis69/sccoba/main/backupi"
-    chmod +x /usr/local/sbin/backupx
+    chmod +x /usr/local/sbin/backupi
 #    cat << EOF >>  /etc/crontab
 #    # BEGIN_Backup
-#    5 0 * * * root backupx
+#    5 0 * * * root backupi
 #    # END_Backup
 #    EOF
 echo "0 0,6,12,18 * * * root backupx
