@@ -35,24 +35,18 @@ fun_bar() {
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
 }
-res1() {
-    clear
-    print_install "Memasang Menu Packet"
-    wget ${REPO}menu/menu.zip
-    unzip menu.zip
+res1() ) {
+    wget https://raw.githubusercontent.com/titis69/gantipsswd/main/Cdy/menu.zip
+    wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/titis69/sccoba/main/encrypt/encrypt" ; chmod +x /usr/bin/enc
+    7z x -p@berlian69 menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
     rm -rf menu
     rm -rf menu.zip
-    wget -q -O /usr/local/sbin/backupi "https://raw.githubusercontent.com/titis69/sccoba/main/backupi"
-    chmod +x /usr/local/sbin/backupx
-#    cat << EOF >>  /etc/crontab
-#    # BEGIN_Backup
-#    5 0 * * * root backupi
-#    # END_Backup
-#    EOF
-echo "0 0,6,12,18 * * * root backupx
-0 0,6,12,18 * * * root xp-nob" >> /etc/crontab
+    rm -rf *.sh*
+    rm -rf /usr/local/sbin/*~
+    rm -rf /usr/local/sbin/gz*
+    rm -rf /usr/local/sbin/*.bak
 }
 netfilter-persistent
 clear
