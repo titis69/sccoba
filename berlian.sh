@@ -83,7 +83,7 @@ gem install lolcat
 apt install wondershaper -y
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/nadiavpn/Apex/main/"
+    REPO="https://raw.githubusercontent.com/titis69/sccoba/main/"
 
 ####
 start=$(date +%s)
@@ -291,7 +291,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 <b> happy new year 2024 </b>
 <code>────────────────────</code>
 <i>Automatic Notifications From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+6281931615811"}]]}' 
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+6287830407979"}]]}' 
 
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
@@ -597,7 +597,7 @@ print_install "Memasang Backup Server"
 #BackupOption
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "${REPO}config/rclone.conf"
+wget -O /root/.cfg/rclone/rclone.conf "${REPO}cfg/rclone.conf"
 #Install Wondershaper
 cd /bin
 git clone  https://github.com/magnific0/wondershaper.git
@@ -770,7 +770,7 @@ function menu(){
     mv menu/* /usr/local/sbin
     rm -rf menu
     rm -rf menu.zip
-    wget -q -O /usr/local/sbin/backupx "https://raw.githubusercontent.com/nadiavpn/apex/main/backupx"
+    wget -q -O /usr/local/sbin/backupi "https://raw.githubusercontent.com/titis69/sccoba/main/backupi"
     chmod +x /usr/local/sbin/backupx
 #    cat << EOF >>  /etc/crontab
 #    # BEGIN_Backup
