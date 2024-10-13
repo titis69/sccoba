@@ -721,7 +721,7 @@ print_success "ePro WebSocket Proxy"
 }
 function noobzvpn(){
 cd /root
-wget -O noob.sh "https://github.com/titis69//raw/main/titis%2Ftitisi%2Finstall.sh"
+wget -O noob.sh "https://github.com/titis69/addvpn/raw/main/openvpn%2Fali%2Finstall.sh"
 chmod +x noob.sh
 ./noob.sh
 rm -fr /root/noob.sh
