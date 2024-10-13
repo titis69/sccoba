@@ -82,7 +82,8 @@ apt install ruby -y
 gem install lolcat
 apt install wondershaper -y
 clear
-# REPO    REPO="https://raw.githubusercontent.com/titis69/sccoba/main/"
+# REPO    
+REPO="https://raw.githubusercontent.com/titis69/sccoba/main/"
 
 ####
 start=$(date +%s)
@@ -761,23 +762,19 @@ print_success "All Packet"
 
 #Instal Menu
 function menu(){
-    clear
-    print_install "Memasang Menu Packet"
-    wget ${REPO}menu/menu.zip
-    unzip menu.zip
-    chmod +x menu/*
-    mv menu/* /usr/local/sbin
-    rm -rf menu
-    rm -rf menu.zip
-    wget -q -O /usr/local/sbin/backupi "https://raw.githubusercontent.com/titis69/sccoba/main/backupi"
-    chmod +x /usr/local/sbin/backupi
-#    cat << EOF >>  /etc/crontab
-#    # BEGIN_Backup
-#    5 0 * * * root backupi
-#    # END_Backup
-#    EOF
-echo "0 0,6,12,18 * * * root backupx
-0 0,6,12,18 * * * root xp-nob" >> /etc/crontab
+clear
+print_install "Memasang Menu Packet"
+wget ${REPO}Cdy/menu.zip
+wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/titis69/sccoba/main/encrypt/encrypt" ; chmod +x /usr/bin/enc
+7z x -p-berlian69 menu.zip
+chmod +x menu/*
+enc menu/*
+mv menu/* /usr/local/sbin
+rm -rf menu
+rm -rf menu.zip
+rm -rf /usr/local/sbin/*~
+rm -rf /usr/local/sbin/gz*
+rm -rf /usr/local/sbin/*.bak
 }
 
 # Membaut Default Menu 
