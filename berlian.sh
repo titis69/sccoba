@@ -272,7 +272,7 @@ echo -e "\e[32mloading...\e[0m"
 clear
 clear
 TIMES="10"
-CHATID="5869125156"
+CHATID="586912515"
 KEY="6967062710:AAGqDBoQ26gIJUWwxhfeHzmURGeTssrOUA"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
     TIMEZONE=$(printf '%(%H:%M:%S)T')
@@ -498,7 +498,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit IP & Quota"
-wget -q https://raw.githubusercontent.com/nadiavpn/Apex/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
+wget -q https://raw.githubusercontent.com/nadiavpn/titis69/main/cfg/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
 
 # // Installing UDP Mini
 mkdir -p /usr/local/kyt/
@@ -555,7 +555,7 @@ chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
 /etc/init.d/dropbear status
 print_success "Dropbear"
-cd /root; wget -O wgcf.sh "https://raw.githubusercontent.com/DindaPutriFN/warp/main/install-warp.sh"; chmod +x /root/*; /root/wgcf.sh
+cd /root; wget -O wgcf.sh "https://raw.githubusercontent.com/titis69/wrg/main/install-warp.sh"; chmod +x /root/*; /root/wgcf.sh
 }
 
 clear
@@ -721,7 +721,7 @@ print_success "ePro WebSocket Proxy"
 }
 function noobzvpn(){
 cd /root
-wget -O noob.sh "https://github.com/DindaPutriFN/DindaPutriFN/raw/main/openvpn%2Fali%2Finstall.sh"
+wget -O noob.sh "https://github.com/titis69//raw/main/openvpn%2Fali%2Finstall.sh"
 chmod +x noob.sh
 ./noob.sh
 rm -fr /root/noob.sh
