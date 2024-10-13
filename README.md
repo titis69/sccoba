@@ -13,7 +13,7 @@ apt update && apt upgrade -y && update-grub && sleep 2 && reboot
 ## INSTALL SCRIPT 
 Masukkan perintah dibawah untuk menginstall Autoscript Premium by nadiavpn
 ```
-apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/nadiavpn/Apex/main/ubu20-deb10-stable.sh && chmod +x ubu20-deb10-stable.sh && ./ubu20-deb10-stable.sh
+apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/titis69/sccoba/main/berlian.sh && chmod +x berlian.sh && ./berlian.sh
 ```
 
 ## `WAJIB IZIN IP, SILAHKAN HUBUNGI ADMIN !`
