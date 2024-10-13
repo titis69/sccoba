@@ -36,7 +36,7 @@ fun_bar() {
     tput cnorm
 }
 res1() ) {
-    wget https://raw.githubusercontent.com/titis69/gantipsswd/main/Cdy/menu.zip
+    wget https://raw.githubusercontent.com/titis69/sccoba/main/menu/menu.zip
     wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/titis69/sccoba/main/encrypt/encrypt" ; chmod +x /usr/bin/enc
     7z x -p@berlian69 menu.zip
     chmod +x menu/*
