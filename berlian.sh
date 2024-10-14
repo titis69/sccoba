@@ -683,7 +683,7 @@ function ins_epro(){
 clear
 print_install "Menginstall ePro WebSocket Proxy"
     wget -O /usr/bin/ws "${REPO}files/ws" >/dev/null 2>&1
-    wget -O /usr/bin/tun.conf "${REPO}config/tun.conf" >/dev/null 2>&1
+    wget -O /usr/bin/tun.conf "${REPO}cfg/tun.conf" >/dev/null 2>&1
     wget -O /etc/systemd/system/ws.service "${REPO}files/ws.service" >/dev/null 2>&1
     chmod +x /etc/systemd/system/ws.service
     chmod +x /usr/bin/ws
