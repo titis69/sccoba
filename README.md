@@ -13,7 +13,7 @@ apt update && apt upgrade -y && update-grub && sleep 2 && reboot
 ## INSTALL SCRIPT 
 Masukkan perintah dibawah untuk menginstall Autoscript Premium by nadiavpn
 ```
-apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/titis69/sccoba/main/berlian.sh && chmod +x berlian.sh && ./berlian.sh
+apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/titis69/sccoba/main/coba.sh && chmod +x coba.sh && ./coba.sh
 ```
 
 ## `WAJIB IZIN IP, SILAHKAN HUBUNGI ADMIN !`
