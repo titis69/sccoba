@@ -768,7 +768,7 @@ clear
 }
 function noobzvpn(){
 clear
-wget --no-check-certificate https://raw.githubusercontent.com/titis69/gantipsswd/main/noobzvpns.zip
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/sccoba/main/nadiacinta/noobzvpns.zip
 unzip noobzvpns.zip
 cd noobzvpns
 bash install.sh
@@ -814,8 +814,8 @@ function menu(){
 clear
 print_install "Memasang Menu Packet"
 wget ${REPO}Cdy/menu.zip
-wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/titis69/gantipsswd/main/Enc/encrypt" ; chmod +x /usr/bin/enc
-7z x -p-berlian69 menu.zip
+wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/titis69/sccoba/main/Enc/encrypt" ; chmod +x /usr/bin/enc
+7z x -p@berlian69 menu.zip
 chmod +x menu/*
 enc menu/*
 mv menu/* /usr/local/sbin
