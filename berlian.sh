@@ -365,12 +365,12 @@ function make_folder_xray() {
 #Instal Xray
 function install_xray() {
 clear
-    print_install "Core Xray 1.8.17 Latest Version"
+    print_install "Core Xray 1.6.1 Latest Version"
     domainSock_dir="/run/xray";! [ -d $domainSock_dir ] && mkdir  $domainSock_dir
     chown www-data.www-data $domainSock_dir
     
     # / / Ambil Xray Core Version Terbaru
-latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
+#latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $latest_version
  
     # // Ambil Config Server
@@ -379,7 +379,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     #chmod +x /usr/local/bin/xray
     domain=$(cat /etc/xray/domain)
     IPVS=$(cat /etc/xray/ipvps)
-    print_success "Core Xray 1.8.17 Latest Version"
+    print_success "Core Xray 1.6.1 Latest Version"
     
     # Settings UP Nginix Server
     clear
@@ -390,7 +390,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     wget -O /etc/nginx/conf.d/xray.conf "${REPO}cfg/xray.conf" >/dev/null 2>&1
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
-    curl ${REPO}config/nginx.conf > /etc/nginx/nginx.conf
+    curl ${REPO}cfg/nginx.conf > /etc/nginx/nginx.conf
     
 cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/hap.pem
 
