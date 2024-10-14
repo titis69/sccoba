@@ -553,7 +553,7 @@ clear
 function ins_SSHD(){
 clear
 print_install "Memasang SSHD"
-wget -q -O /etc/ssh/sshd_config "${REPO}Fls/sshd" >/dev/null 2>&1
+wget -q -O /etc/ssh/sshd_config "${REPO}files/sshd" >/dev/null 2>&1
 chmod 700 /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 systemctl restart ssh
@@ -565,7 +565,7 @@ function ins_dropbear(){
 clear
 print_install "Menginstall Dropbear"
 apt-get install dropbear -y > /dev/null 2>&1
-wget -q -O /etc/default/dropbear "${REPO}Cfg/dropbear.conf"
+wget -q -O /etc/default/dropbear "${REPO}cfg/dropbear.conf"
 chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
 /etc/init.d/dropbear status
@@ -596,7 +596,7 @@ print_success "Vnstat"
 function ins_openvpn(){
 clear
 print_install "Menginstall OpenVPN"
-wget ${REPO}Fls/openvpn &&  chmod +x openvpn && ./openvpn
+wget ${REPO}files/openvpn &&  chmod +x openvpn && ./openvpn
 /etc/init.d/openvpn restart
 print_success "OpenVPN"
 }
@@ -605,7 +605,7 @@ clear
 print_install "Memasang Backup Server"
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "${REPO}Cfg/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "${REPO}cfg/rclone.conf"
 cd /bin
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
@@ -629,7 +629,7 @@ password 19191919marlina
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
-wget -q -O /etc/ipserver "${REPO}Fls/ipserver" && bash /etc/ipserver
+wget -q -O /etc/ipserver "${REPO}files/ipserver" && bash /etc/ipserver
 print_success "Backup Server"
 }
 clear
@@ -670,9 +670,9 @@ print_success "Fail2ban"
 function ins_epro(){
 clear
 print_install "Menginstall ePro WebSocket Proxy"
-wget -O /usr/bin/ws "${REPO}Fls/ws" >/dev/null 2>&1
-wget -O /usr/bin/tun.conf "${REPO}Cfg/tun.conf" >/dev/null 2>&1
-wget -O /etc/systemd/system/ws.service "${REPO}Fls/ws.service" >/dev/null 2>&1
+wget -O /usr/bin/ws "${REPO}files/ws" >/dev/null 2>&1
+wget -O /usr/bin/tun.conf "${REPO}cfg/tun.conf" >/dev/null 2>&1
+wget -O /etc/systemd/system/ws.service "${REPO}files/ws.service" >/dev/null 2>&1
 chmod +x /etc/systemd/system/ws.service
 chmod +x /usr/bin/ws
 chmod 644 /usr/bin/tun.conf
@@ -813,8 +813,8 @@ print_success "All Packet"
 function menu(){
 clear
 print_install "Memasang Menu Packet"
-wget ${REPO}Cdy/menu.zip
-wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/titis69/sccoba/main/Enc/encrypt" ; chmod +x /usr/bin/enc
+wget ${REPO}menu/menu.zip
+wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/titis69/sccoba/main/encrypt/encrypt" ; chmod +x /usr/bin/enc
 7z x -p@berlian69 menu.zip
 chmod +x menu/*
 enc menu/*
