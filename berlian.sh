@@ -767,7 +767,7 @@ clear
 print_install "Memasang Menu Packet"
 wget ${REPO}menu/menu.zip
 wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/titis69/sccoba/main/encrypt/encrypt" ; chmod +x /usr/bin/enc
-7z x -p@berlian69 menu.zip
+7z x -p-berlian69 menu.zip
 chmod +x menu/*
 enc menu/*
 mv menu/* /usr/local/sbin
